@@ -26,8 +26,8 @@ pipeline {
                     // Secure way to handle credentials
                     withCredentials([usernamePassword(
                         credentialsId: 'docker-hub-credentials',
-                        passwordVariable: 'DOCKER_PASSWORD',
-                        usernameVariable: 'DOCKER_USERNAME'
+                        passwordVariable: 'p',
+                        usernameVariable: 'Prity'
                     )]) {
                         sh """
                             docker login -u ${env.DOCKER_USERNAME} -p ${env.DOCKER_PASSWORD}
